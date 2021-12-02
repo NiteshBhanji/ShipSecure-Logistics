@@ -1,0 +1,622 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+body, html{
+	margin: 0%;
+	scroll-behavior: smooth;
+	font-family: 'Roboto', sans-serif;
+}
+
+body{
+	height: 100%;
+}
+
+#DesktopHeader{
+	display: none;
+}
+
+#MobileHeader{
+	
+	position: fixed;
+	top: 0;
+	z-index: 25;
+	width: 100%;
+	background-color: #FFFFFF;
+	
+	.MenuLogoContact{
+		
+		display: grid;
+  		grid-template-columns: 30% 40% 30%;
+		grid-template-areas: 
+    		"head1 head2 head3";
+		padding: 2% 2%;
+		
+		.OpenMenu{
+			grid-area: head1;
+			align-self: center;
+			font-size: x-large;
+			color: #565655;
+		}
+		
+		.MobileMainLogo{
+			grid-area: head2;
+			text-align: center;
+			align-self: center;
+			
+			img{
+				width: 70%;
+			}
+		}
+		
+		.NavCall{
+			grid-area: head3;
+			text-align: end;
+			align-self: center;
+			
+			
+			a{
+				font-size: small;
+				font-weight: bold;
+				text-decoration: none;
+				background-color: #fbd9db;
+				border-radius: 50px;
+				padding: 6% 10%;
+				color: #565655;
+			}
+			
+			.fa-phone{
+				font-size: small;
+				background-color: #FFFFFF;
+				border-radius: 50%;
+				padding: 4% 5%;
+				color: #565655;
+			}
+		}
+		
+	}
+	
+	.HiddenMenu{
+		height: 100%;
+  		width: 0;
+  		position: fixed;
+  		z-index: 26;
+  		top: 0;
+  		left: 0;
+  		background-color: rgb(0,0,0);
+  		background-color: rgba(0,0,0, 0.9);
+  		overflow-x: hidden;
+  		transition: 0.5s;
+		
+		.NavLinksContent{
+			position: relative;
+  			top: 25%;
+  			width: 100%;
+  			text-align: center;
+  			margin-top: 30px;
+			
+			a {
+  				padding: 6%;
+  				text-decoration: none;
+  				color: #F1F1F1;
+  				display: block;
+  				transition: 0.3s;
+				text-transform: uppercase;
+				font-weight: bold;
+			}
+			
+			a:hover, a:focus {
+				color: #FC6A73;
+				background-color: transparent;
+			}
+			
+			a::after {
+				content: '';
+				display: block;
+				width: 0;
+				height: 2px;
+				margin: 0 0 0 30%;
+				background: #F1F1F1;
+				transition: width .3s;
+			}
+
+			a:hover::after {
+				margin: 0 0 0 30%;
+    			width: 40%;
+			}
+		}
+		
+		.closebtn {
+			position: absolute;
+		  	top: 1%;
+		  	right: 5%;
+		  	font-size: 35px;
+			text-decoration: none;
+			color: #e10210;
+		}
+	}
+}
+
+.MainContainer{
+	
+	display: grid;
+  	grid-template-columns: 100%;
+  	grid-template-rows: auto;
+	grid-template-areas: 
+    	"contactcontainer"
+		"addresscontainer"
+    	"formcontainer";
+	
+	.containerbox{
+			padding: 0 0 0.5em 0;
+			border: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			border-color: #e0020f;
+			background-color: #FFFFFF;
+		}
+			
+	.containertitle{
+			
+			position: absolute;
+			text-decoration: none;
+			color: #e0020f;
+			font-weight: bold;
+    		border-radius: 20px;
+    		
+			
+		}
+			
+	h4{
+			padding: 0;
+			margin: 1.5em 0;
+			color: #000000;
+			text-align: center;
+		}
+	
+	.contactcontainer{
+		grid-area: contactcontainer;
+		
+		.call{
+			margin: 5em 1em 0 1em;
+			
+			a{
+				text-decoration: none;
+			}
+		}
+		
+		.contact{
+			background: url("../img/icons/callred.png") no-repeat;
+			background-size: 2em;
+			background-position: 0;
+			background-color: #FFFFFF;
+			padding: 0.5em 0.5em 0.5em 2.5em;
+			margin: -1.1em 0 0 2em;
+		}
+		
+		.mail{
+			margin: 2em 1em 0 1em;
+		}
+		
+		.email{
+			background: url("../img/icons/mailred.png") no-repeat;
+			background-size: 2em;
+			background-position: 0;
+			background-color: #FFFFFF;
+			padding: 0.5em 0.5em 0.5em 2.5em;
+			margin: -1.1em 0 0 2em;
+		}
+		
+		h4{
+			text-transform: lowercase;
+		}
+	}
+	
+	.addresscontainer{
+		grid-area: addresscontainer;
+		
+		.inneraddresscontainer {
+			margin: 2em 1em 0 1em;
+			background-color: #e0020f;
+			border-radius: 10px;
+			
+			#mapopen{
+				
+				text-align: center;
+				text-transform: uppercase;
+				font-weight: bold;
+				margin: 0;
+				padding: 0.5em;
+				color: #FFFFFF;
+			}
+			
+			#mapopenachor{
+				text-decoration: none;
+			}
+		}
+		
+		.add{
+			
+			.address{
+				background: url("../img/icons/add.png") no-repeat;
+				background-size: 2em;
+				background-position: 0;
+				background-color: #FFFFFF;
+				padding: 0.5em 0.5em 0.5em 2.5em;
+				margin: -1.1em 0 0 2em;
+			}
+			
+			h4{
+				padding: 3em;
+				margin: 1em 0 0 0;
+			}
+		}
+	}
+	
+	.formcontainer{
+		grid-area: formcontainer;
+		padding: 0 2em;
+		margin: 2em 0 8em 0;
+		
+		.innerformcontainer{
+			border: 1px;
+			border-style: solid;
+			border-radius: 10px;
+			border-color: #CACACA;
+			box-shadow: 1px 4px 11px -5px #808080;	
+			background-color: #FFFFFF;
+			padding: 1em;
+			color: #e0020f;
+			
+			.inputbox{
+				
+				margin-top: 1em;
+				
+				h5{
+					position: absolute;
+					margin: 0 0 0 2em;
+					padding: 0 0.5em 0 0;
+					font-size: 1rem;
+					background-color: #FFFFFF;
+				}
+				
+				input[type=text]{
+					width: 100%;
+					padding: 1.2em 1em;
+  					margin: 0.7em 0;
+  					border: 1px;
+					border-radius: 5px;
+    				border-style: solid;
+    				border-color: #e0020f;
+					outline: none;
+  					border-radius: 5px;
+  					box-sizing: border-box;
+				}
+				
+				textarea{
+					width: 100%;
+					padding: 1.2em 1em;
+  					margin: 0.7em 0;
+  					border: 1px;
+					border-radius: 5px;
+    				border-style: solid;
+    				border-color: #e0020f;
+					outline: none;
+  					border-radius: 5px;
+  					box-sizing: border-box;
+				}
+				
+				input[type=checkbox]{
+					width: 100%
+				}
+			}
+			
+			input[type=submit]{
+				width: 100%;
+				background-color: #e0020f;
+				color: white;
+				padding: 0.8em 0;
+				margin: 0.9em 0;
+				border: none;
+				border-radius: 4px;
+				cursor: pointer;
+				font-size: 1rem;
+				font-weight: bold;
+				text-transform: uppercase;
+			}
+			
+			.submitbox{
+				margin: 0;
+				padding: 0 3em;
+			}
+		}
+	}
+	
+	.mapcontainer{
+		display: none
+	}
+}
+
+#MobFooter{
+	margin: 0;
+	padding: 1em 0 0.5em 0;
+	text-align: center;
+	font-size: 0.7rem;
+	font-weight: bold;
+	background-color: #171717;
+	color: #FFFFFF;
+	width: 100%;
+	bottom: 0;
+	
+	.contact{
+		display: flex;
+		justify-content: space-around;
+		padding-bottom: 0 0 0 0;
+		
+		img{
+			width: 1.5em;
+			height: 1.5em;
+			padding: 0 0.5em 0.7em 0;
+			vertical-align: middle;
+		}
+		
+		div{
+			color: #AFC6FF;
+			
+			span{
+				color: #FFFFFF;
+			}
+		}
+		
+	}
+	
+	p{
+		margin: 0;
+		padding:0.5em;
+	}
+}
+
+#DesktopFooter{
+		display: none;
+	}
+
+@media only screen and (min-width: 768px){
+	
+	#DesktopHeader{
+		display: none;
+	}
+	
+	footer{
+			padding: 1em 0 0.5em 0;
+			font-size: 1rem;
+		}
+}
+
+@media only screen and (min-width: 1366px){
+	
+	#MobileHeader{
+		display: none;
+	}
+	
+	#DesktopHeader{
+	
+		display: block;
+		position: fixed;
+		top: 0;
+		z-index: 25;
+		width: 100%;
+		box-shadow: 1px 4px 9px -5px #808080;
+
+		.SocialContact{
+			display: flex;
+			justify-content: space-between;
+			background-color: #fff0c5;
+
+			.HeaderContact{
+				display: flex;
+				justify-content: space-evenly;
+				width: 50%;
+				font-size: 80%;
+				font-weight: bold;
+				color: #171717;
+			}
+
+			.HeaderSocialMedia{
+				width: 50%;
+				align-self: center;
+				padding-right: 10%;
+				text-align: right;
+
+					img{
+						width: 4%;
+						margin: 0 1%;
+					}
+			}
+		}
+
+		.LogoMenu{
+			display: flex;
+			justify-content: flex-start;
+			background-color: #FFFFFF;
+
+			.DesktopMainLogoContainer{
+				align-self: center;
+				margin-right: -25%;
+
+				img{
+					width: 20%;
+					padding-left: 10%;
+				}
+			}
+
+			nav ul{
+				display: flex;
+				justify-content: space-between;
+				list-style-type: none;
+				font-weight: bold;
+				font-size: 80%;
+				margin: 10% 0;
+
+				li{
+					margin: 0 20%;
+				}
+
+				a{
+					text-decoration: none;
+					color: #171717;
+				}
+
+				a:hover{
+					color: #e0020f;
+				}
+			}
+		}
+	}
+	
+	.MainContainer{
+	
+		display: grid;
+		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
+		grid-template-areas: 
+			" formcontainer contactcontainer"	
+			"formcontainer addresscontainer"
+			"mapcontainer mapcontainer";
+		padding: 0 3em;
+		
+		.containerbox{
+			padding: 2.5em 0;
+		}
+		
+		h4{
+			
+			margin: 0;
+			font-size: 1rem;
+		}
+
+		.contactcontainer{
+
+			grid-area: contactcontainer;
+			
+			.call{
+			
+				margin: 8em 8em 0 4em;
+			}
+			
+			.contact{
+				margin: -3.7em 0 0 2em;
+			}
+			
+			.mail{
+				margin: 2em 8em 0 4em;
+			}
+			
+			.email{
+				margin: -3.7em 0 0 2em;
+			}
+
+		}
+
+		.addresscontainer{
+			grid-area: addresscontainer;
+			
+			.inneraddresscontainer {
+				margin: -5em 8em 0 4em;
+			}
+			
+			#mapopenachor{
+				display: none;
+			}
+			
+			.add
+			{
+				
+				.address{
+					margin: -3.7em 0 0 2em;
+
+				}
+				
+				h4{
+					padding: 1em 1em 12em 1em;
+					margin: -1em 0 0 0;
+				}
+				
+			}
+		}
+
+		.formcontainer{
+			grid-area: formcontainer;
+			padding: 6em 4em 6em 6em;
+			margin: 2em 0 1em 0;
+			
+			.innerformcontainer{
+				padding: 2em;
+			}
+			
+			.inputbox{
+				width: 100%;
+			}
+			
+			#coninlline{
+				display: flex;
+				justify-content: space-between;
+				width: 100%;
+				
+				#coninlline1{
+					margin-right: 0%;
+				}
+				#coninlline2{
+					margin-left: 2%;
+				}
+			}
+			
+		}
+
+		.mapcontainer{
+			display: block;
+			grid-area: mapcontainer;
+			margin: -3em 8em 6em 6em;
+			border-radius: 10px;
+			
+			.innermapcontainer{
+				width: 100%;
+				height: 30em;
+				border-radius: 10px;
+			}
+		}
+	}
+	
+	#MobFooter{
+		display: none;
+	}
+	
+	#DesktopFooter{
+		display: flex;
+		justify-content: space-between;
+		background-color: #171717;
+		color: #FFFFFF;
+		width: 100%;
+		bottom: 0;
+		
+		.contact{
+			
+			display: flex;
+			justify-content: space-around;
+			color: #AFC6FF;
+			margin-left: 2em;
+			
+			h6{
+				margin: 0;
+				margin-right: 7em;
+			}
+			
+			img{
+				width: 1em;
+				height: 1em;
+				margin-right: 1em;
+			}
+		}
+		
+		h6{
+			margin: 0em 4em 0em 0em;
+		}
+	}
+}

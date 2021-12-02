@@ -1,0 +1,112 @@
+.Section2 {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 50% 50%;
+      grid-template-columns: 50% 50%;
+  -ms-grid-rows: auto auto auto auto;
+      grid-template-rows: auto auto auto auto;
+      grid-template-areas: "Sec20 Sec20" "Sec21 Sec22" "Sec23 Sec24" "Sec25 Sec26" "Sec27 Sec28";
+  padding: 0 10%;
+  text-align: center;
+  color: #FC6A73;
+  background-color: #f9f9f9;
+}
+
+.Section2 img {
+  width: 45%;
+}
+
+.Section2 .Sec20 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: Sec20;
+  color: #565655;
+  text-transform: uppercase;
+  padding-bottom: 8%;
+}
+
+.Section2 .Sec21 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: Sec21;
+  padding: 0 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Section2 .Sec22 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: Sec22;
+  background-color: #C5222C;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 15% 0%;
+}
+
+.Section2 .Sec23 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: Sec23;
+  background-color: #C5222C;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 15% 0%;
+}
+
+.Section2 .Sec24 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: Sec24;
+  padding: 0 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Section2 .Sec25 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: Sec25;
+  padding: 0 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.Section2 .Sec26 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: Sec26;
+  background-color: #C5222C;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 15% 0%;
+}
+
+.Section2 .Sec27 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: Sec27;
+  background-color: #C5222C;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  padding: 15% 0%;
+}
+
+.Section2 .Sec28 {
+  -ms-grid-row: 5;
+  -ms-grid-column: 2;
+  grid-area: Sec28;
+  padding: 0 15%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+/*# sourceMappingURL=about.css.map */

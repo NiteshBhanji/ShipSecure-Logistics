@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+body, html {
+  margin: 0%;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+#DesktopHeader {
+  display: none;
+}
+
+#MobileHeader {
+  position: fixed;
+  top: 0;
+  z-index: 25;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+#MobileHeader .MenuLogoContact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 40% 30%;
+      grid-template-columns: 30% 40% 30%;
+      grid-template-areas: "head1 head2 head3";
+  padding: 2% 2%;
+}
+
+#MobileHeader .MenuLogoContact .OpenMenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: x-large;
+  color: #565655;
+}
+
+#MobileHeader .MenuLogoContact .MobileMainLogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: head2;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#MobileHeader .MenuLogoContact .MobileMainLogo img {
+  width: 70%;
+}
+
+#MobileHeader .MenuLogoContact .NavCall {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: head3;
+  text-align: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#MobileHeader .MenuLogoContact .NavCall a {
+  font-size: small;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fbd9db;
+  border-radius: 50px;
+  padding: 6% 10%;
+  color: #565655;
+}
+
+#MobileHeader .MenuLogoContact .NavCall .fa-phone {
+  font-size: small;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 4% 5%;
+  color: #565655;
+}
+
+#MobileHeader .HiddenMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 26;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a {
+  padding: 6%;
+  text-decoration: none;
+  color: #F1F1F1;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a:hover, #MobileHeader .HiddenMenu .NavLinksContent a:focus {
+  color: #FC6A73;
+  background-color: transparent;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: 0 0 0 30%;
+  background: #F1F1F1;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a:hover::after {
+  margin: 0 0 0 30%;
+  width: 40%;
+}
+
+#MobileHeader .HiddenMenu .closebtn {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  font-size: 35px;
+  text-decoration: none;
+  color: #e10210;
+}
+
+#MobFooter {
+  margin: 0;
+  padding: 1em 0 0.5em 0;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #171717;
+  color: #FFFFFF;
+  width: 100%;
+  bottom: 0;
+  z-index: 25;
+}
+
+#MobFooter .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 0 0 0 0;
+}
+
+#MobFooter .contact img {
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.5em 0.7em 0;
+  vertical-align: middle;
+}
+
+#MobFooter .contact div {
+  color: #FF727B;
+}
+
+#MobFooter .contact div span {
+  color: #FFFFFF;
+}
+
+#MobFooter p {
+  margin: 0;
+  padding: 0.5em;
+}
+
+#DesktopFooter {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #DesktopHeader {
+    display: none;
+  }
+  footer {
+    padding: 1em 0 0.5em 0;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  #MobileHeader {
+    display: none;
+  }
+  #DesktopHeader {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 25;
+    width: 100%;
+    -webkit-box-shadow: 1px 4px 9px -5px #808080;
+            box-shadow: 1px 4px 9px -5px #808080;
+  }
+  #DesktopHeader .SocialContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #fff0c5;
+  }
+  #DesktopHeader .SocialContact .HeaderContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 50%;
+    font-size: 80%;
+    font-weight: bold;
+    color: #171717;
+  }
+  #DesktopHeader .SocialContact .HeaderSocialMedia {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-right: 10%;
+    text-align: right;
+  }
+  #DesktopHeader .SocialContact .HeaderSocialMedia img {
+    width: 4%;
+    margin: 0 1%;
+  }
+  #DesktopHeader .LogoMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: #FFFFFF;
+  }
+  #DesktopHeader .LogoMenu .DesktopMainLogoContainer {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: -25%;
+  }
+  #DesktopHeader .LogoMenu .DesktopMainLogoContainer img {
+    width: 20%;
+    padding-left: 10%;
+  }
+  #DesktopHeader .LogoMenu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 80%;
+    margin: 10% 0;
+  }
+  #DesktopHeader .LogoMenu nav ul li {
+    margin: 0 20%;
+  }
+  #DesktopHeader .LogoMenu nav ul a {
+    text-decoration: none;
+    color: #171717;
+  }
+  #DesktopHeader .LogoMenu nav ul a:hover {
+    color: #e0020f;
+  }
+  #MobFooter {
+    display: none;
+  }
+  #DesktopFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #171717;
+    color: #FFFFFF;
+    width: 100%;
+    bottom: 0;
+    z-index: 25;
+  }
+  #DesktopFooter .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #FF727B;
+    margin-left: 2em;
+  }
+  #DesktopFooter .contact h6 {
+    margin: 0;
+    margin-right: 7em;
+  }
+  #DesktopFooter .contact img {
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+  }
+  #DesktopFooter h6 {
+    margin: 0em 4em 0em 0em;
+  }
+}
+/*# sourceMappingURL=services.css.map */

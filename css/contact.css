@@ -1,0 +1,623 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+body, html {
+  margin: 0%;
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  height: 100%;
+}
+
+#DesktopHeader {
+  display: none;
+}
+
+#MobileHeader {
+  position: fixed;
+  top: 0;
+  z-index: 25;
+  width: 100%;
+  background-color: #FFFFFF;
+}
+
+#MobileHeader .MenuLogoContact {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 40% 30%;
+      grid-template-columns: 30% 40% 30%;
+      grid-template-areas: "head1 head2 head3";
+  padding: 2% 2%;
+}
+
+#MobileHeader .MenuLogoContact .OpenMenu {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: head1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: x-large;
+  color: #565655;
+}
+
+#MobileHeader .MenuLogoContact .MobileMainLogo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: head2;
+  text-align: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#MobileHeader .MenuLogoContact .MobileMainLogo img {
+  width: 70%;
+}
+
+#MobileHeader .MenuLogoContact .NavCall {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: head3;
+  text-align: end;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#MobileHeader .MenuLogoContact .NavCall a {
+  font-size: small;
+  font-weight: bold;
+  text-decoration: none;
+  background-color: #fbd9db;
+  border-radius: 50px;
+  padding: 6% 10%;
+  color: #565655;
+}
+
+#MobileHeader .MenuLogoContact .NavCall .fa-phone {
+  font-size: small;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  padding: 4% 5%;
+  color: #565655;
+}
+
+#MobileHeader .HiddenMenu {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 26;
+  top: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a {
+  padding: 6%;
+  text-decoration: none;
+  color: #F1F1F1;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a:hover, #MobileHeader .HiddenMenu .NavLinksContent a:focus {
+  color: #FC6A73;
+  background-color: transparent;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  margin: 0 0 0 30%;
+  background: #F1F1F1;
+  -webkit-transition: width .3s;
+  transition: width .3s;
+}
+
+#MobileHeader .HiddenMenu .NavLinksContent a:hover::after {
+  margin: 0 0 0 30%;
+  width: 40%;
+}
+
+#MobileHeader .HiddenMenu .closebtn {
+  position: absolute;
+  top: 1%;
+  right: 5%;
+  font-size: 35px;
+  text-decoration: none;
+  color: #e10210;
+}
+
+.MainContainer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+      grid-template-areas: "contactcontainer" "addresscontainer" "formcontainer";
+}
+
+.MainContainer .containerbox {
+  padding: 0 0 0.5em 0;
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #e0020f;
+  background-color: #FFFFFF;
+}
+
+.MainContainer .containertitle {
+  position: absolute;
+  text-decoration: none;
+  color: #e0020f;
+  font-weight: bold;
+  border-radius: 20px;
+}
+
+.MainContainer h4 {
+  padding: 0;
+  margin: 1.5em 0;
+  color: #000000;
+  text-align: center;
+}
+
+.MainContainer .contactcontainer {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: contactcontainer;
+}
+
+.MainContainer .contactcontainer .call {
+  margin: 5em 1em 0 1em;
+}
+
+.MainContainer .contactcontainer .call a {
+  text-decoration: none;
+}
+
+.MainContainer .contactcontainer .contact {
+  background: url("../img/icons/callred.png") no-repeat;
+  background-size: 2em;
+  background-position: 0;
+  background-color: #FFFFFF;
+  padding: 0.5em 0.5em 0.5em 2.5em;
+  margin: -1.1em 0 0 2em;
+}
+
+.MainContainer .contactcontainer .mail {
+  margin: 2em 1em 0 1em;
+}
+
+.MainContainer .contactcontainer .email {
+  background: url("../img/icons/mailred.png") no-repeat;
+  background-size: 2em;
+  background-position: 0;
+  background-color: #FFFFFF;
+  padding: 0.5em 0.5em 0.5em 2.5em;
+  margin: -1.1em 0 0 2em;
+}
+
+.MainContainer .contactcontainer h4 {
+  text-transform: lowercase;
+}
+
+.MainContainer .addresscontainer {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: addresscontainer;
+}
+
+.MainContainer .addresscontainer .inneraddresscontainer {
+  margin: 2em 1em 0 1em;
+  background-color: #e0020f;
+  border-radius: 10px;
+}
+
+.MainContainer .addresscontainer .inneraddresscontainer #mapopen {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  padding: 0.5em;
+  color: #FFFFFF;
+}
+
+.MainContainer .addresscontainer .inneraddresscontainer #mapopenachor {
+  text-decoration: none;
+}
+
+.MainContainer .addresscontainer .add .address {
+  background: url("../img/icons/add.png") no-repeat;
+  background-size: 2em;
+  background-position: 0;
+  background-color: #FFFFFF;
+  padding: 0.5em 0.5em 0.5em 2.5em;
+  margin: -1.1em 0 0 2em;
+}
+
+.MainContainer .addresscontainer .add h4 {
+  padding: 3em;
+  margin: 1em 0 0 0;
+}
+
+.MainContainer .formcontainer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: formcontainer;
+  padding: 0 2em;
+  margin: 2em 0 8em 0;
+}
+
+.MainContainer .formcontainer .innerformcontainer {
+  border: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  border-color: #CACACA;
+  -webkit-box-shadow: 1px 4px 11px -5px #808080;
+          box-shadow: 1px 4px 11px -5px #808080;
+  background-color: #FFFFFF;
+  padding: 1em;
+  color: #e0020f;
+}
+
+.MainContainer .formcontainer .innerformcontainer .inputbox {
+  margin-top: 1em;
+}
+
+.MainContainer .formcontainer .innerformcontainer .inputbox h5 {
+  position: absolute;
+  margin: 0 0 0 2em;
+  padding: 0 0.5em 0 0;
+  font-size: 1rem;
+  background-color: #FFFFFF;
+}
+
+.MainContainer .formcontainer .innerformcontainer .inputbox input[type=text] {
+  width: 100%;
+  padding: 1.2em 1em;
+  margin: 0.7em 0;
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #e0020f;
+  outline: none;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.MainContainer .formcontainer .innerformcontainer .inputbox textarea {
+  width: 100%;
+  padding: 1.2em 1em;
+  margin: 0.7em 0;
+  border: 1px;
+  border-radius: 5px;
+  border-style: solid;
+  border-color: #e0020f;
+  outline: none;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.MainContainer .formcontainer .innerformcontainer .inputbox input[type=checkbox] {
+  width: 100%;
+}
+
+.MainContainer .formcontainer .innerformcontainer input[type=submit] {
+  width: 100%;
+  background-color: #e0020f;
+  color: white;
+  padding: 0.8em 0;
+  margin: 0.9em 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.MainContainer .formcontainer .innerformcontainer .submitbox {
+  margin: 0;
+  padding: 0 3em;
+}
+
+.MainContainer .mapcontainer {
+  display: none;
+}
+
+#MobFooter {
+  margin: 0;
+  padding: 1em 0 0.5em 0;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: bold;
+  background-color: #171717;
+  color: #FFFFFF;
+  width: 100%;
+  bottom: 0;
+}
+
+#MobFooter .contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-bottom: 0 0 0 0;
+}
+
+#MobFooter .contact img {
+  width: 1.5em;
+  height: 1.5em;
+  padding: 0 0.5em 0.7em 0;
+  vertical-align: middle;
+}
+
+#MobFooter .contact div {
+  color: #AFC6FF;
+}
+
+#MobFooter .contact div span {
+  color: #FFFFFF;
+}
+
+#MobFooter p {
+  margin: 0;
+  padding: 0.5em;
+}
+
+#DesktopFooter {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  #DesktopHeader {
+    display: none;
+  }
+  footer {
+    padding: 1em 0 0.5em 0;
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1366px) {
+  #MobileHeader {
+    display: none;
+  }
+  #DesktopHeader {
+    display: block;
+    position: fixed;
+    top: 0;
+    z-index: 25;
+    width: 100%;
+    -webkit-box-shadow: 1px 4px 9px -5px #808080;
+            box-shadow: 1px 4px 9px -5px #808080;
+  }
+  #DesktopHeader .SocialContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #fff0c5;
+  }
+  #DesktopHeader .SocialContact .HeaderContact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 50%;
+    font-size: 80%;
+    font-weight: bold;
+    color: #171717;
+  }
+  #DesktopHeader .SocialContact .HeaderSocialMedia {
+    width: 50%;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-right: 10%;
+    text-align: right;
+  }
+  #DesktopHeader .SocialContact .HeaderSocialMedia img {
+    width: 4%;
+    margin: 0 1%;
+  }
+  #DesktopHeader .LogoMenu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    background-color: #FFFFFF;
+  }
+  #DesktopHeader .LogoMenu .DesktopMainLogoContainer {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    margin-right: -25%;
+  }
+  #DesktopHeader .LogoMenu .DesktopMainLogoContainer img {
+    width: 20%;
+    padding-left: 10%;
+  }
+  #DesktopHeader .LogoMenu nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    list-style-type: none;
+    font-weight: bold;
+    font-size: 80%;
+    margin: 10% 0;
+  }
+  #DesktopHeader .LogoMenu nav ul li {
+    margin: 0 20%;
+  }
+  #DesktopHeader .LogoMenu nav ul a {
+    text-decoration: none;
+    color: #171717;
+  }
+  #DesktopHeader .LogoMenu nav ul a:hover {
+    color: #e0020f;
+  }
+  .MainContainer {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 50% 50%;
+        grid-template-columns: 50% 50%;
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+        grid-template-areas: " formcontainer contactcontainer"	 "formcontainer addresscontainer" "mapcontainer mapcontainer";
+    padding: 0 3em;
+  }
+  .MainContainer .containerbox {
+    padding: 2.5em 0;
+  }
+  .MainContainer h4 {
+    margin: 0;
+    font-size: 1rem;
+  }
+  .MainContainer .contactcontainer {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: contactcontainer;
+  }
+  .MainContainer .contactcontainer .call {
+    margin: 8em 8em 0 4em;
+  }
+  .MainContainer .contactcontainer .contact {
+    margin: -3.7em 0 0 2em;
+  }
+  .MainContainer .contactcontainer .mail {
+    margin: 2em 8em 0 4em;
+  }
+  .MainContainer .contactcontainer .email {
+    margin: -3.7em 0 0 2em;
+  }
+  .MainContainer .addresscontainer {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+    grid-area: addresscontainer;
+  }
+  .MainContainer .addresscontainer .inneraddresscontainer {
+    margin: -5em 8em 0 4em;
+  }
+  .MainContainer .addresscontainer #mapopenachor {
+    display: none;
+  }
+  .MainContainer .addresscontainer .add .address {
+    margin: -3.7em 0 0 2em;
+  }
+  .MainContainer .addresscontainer .add h4 {
+    padding: 1em 1em 12em 1em;
+    margin: -1em 0 0 0;
+  }
+  .MainContainer .formcontainer {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 1;
+    grid-area: formcontainer;
+    padding: 6em 4em 6em 6em;
+    margin: 2em 0 1em 0;
+  }
+  .MainContainer .formcontainer .innerformcontainer {
+    padding: 2em;
+  }
+  .MainContainer .formcontainer .inputbox {
+    width: 100%;
+  }
+  .MainContainer .formcontainer #coninlline {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    width: 100%;
+  }
+  .MainContainer .formcontainer #coninlline #coninlline1 {
+    margin-right: 0%;
+  }
+  .MainContainer .formcontainer #coninlline #coninlline2 {
+    margin-left: 2%;
+  }
+  .MainContainer .mapcontainer {
+    display: block;
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: mapcontainer;
+    margin: -3em 8em 6em 6em;
+    border-radius: 10px;
+  }
+  .MainContainer .mapcontainer .innermapcontainer {
+    width: 100%;
+    height: 30em;
+    border-radius: 10px;
+  }
+  #MobFooter {
+    display: none;
+  }
+  #DesktopFooter {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #171717;
+    color: #FFFFFF;
+    width: 100%;
+    bottom: 0;
+  }
+  #DesktopFooter .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #AFC6FF;
+    margin-left: 2em;
+  }
+  #DesktopFooter .contact h6 {
+    margin: 0;
+    margin-right: 7em;
+  }
+  #DesktopFooter .contact img {
+    width: 1em;
+    height: 1em;
+    margin-right: 1em;
+  }
+  #DesktopFooter h6 {
+    margin: 0em 4em 0em 0em;
+  }
+}
+/*# sourceMappingURL=contact.css.map */

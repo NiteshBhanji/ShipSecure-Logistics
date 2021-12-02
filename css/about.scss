@@ -1,0 +1,78 @@
+.Section2{
+		display: grid;
+  		grid-template-columns: 50% 50%;
+		grid-template-rows: auto auto auto auto;
+		grid-template-areas:
+			"Sec20 Sec20"
+			"Sec21 Sec22"
+			"Sec23 Sec24"
+			"Sec25 Sec26"
+			"Sec27 Sec28";
+		padding: 0 10%;
+		text-align: center;
+		color: #FC6A73;
+		background-color: #f9f9f9;
+		
+		img{
+			width: 45%;
+		}
+		
+		.Sec20{
+			grid-area: Sec20;
+			color: #565655;
+			text-transform: uppercase;
+			padding-bottom: 8%;
+		}
+		
+		.Sec21{
+			grid-area: Sec21;
+			padding: 0 15%;
+			align-self: center;
+		}
+		
+		.Sec22{
+			grid-area: Sec22;
+			background-color: #C5222C;
+			align-self: center;
+    		padding: 15% 0%;
+		}
+		
+		.Sec23{
+			grid-area: Sec23;
+			background-color: #C5222C;
+			align-self: center;
+    		padding: 15% 0%;
+		}
+		
+		.Sec24{
+			grid-area: Sec24;
+			padding: 0 15%;
+			align-self: center;
+		}
+		
+		.Sec25{
+			grid-area: Sec25;
+			padding: 0 15%;
+			align-self: center;
+		}
+		
+		.Sec26{
+			grid-area: Sec26;
+			background-color: #C5222C;
+			align-self: center;
+    		padding: 15% 0%;
+		}
+		
+		.Sec27{
+			grid-area: Sec27;
+			background-color: #C5222C;
+			align-self: center;
+    		padding: 15% 0%;
+		}
+		
+		.Sec28{
+			grid-area: Sec28;
+			padding: 0 15%;
+			align-self: center;
+		}
+	}
