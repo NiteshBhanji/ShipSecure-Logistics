@@ -53,7 +53,7 @@
 	<link href="css/contact.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/googlemap.js"></script>
-	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrk4rnZbZP_hA_OUinaxh6_K_eMzHu54M&callback=loadmap"></script>
+	
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/contact_mail.js"></script>
 </head>
