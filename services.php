@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Services | Legame Logistics Pvt. Ltd.</title>
+	<title>Services | Shipsecure Logistics Pvt. Ltd.</title>
 	<link href="css/services.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -17,7 +17,7 @@
 		<div class="MenuLogoContact">
 			<div onclick="openNav()" class="OpenMenu">&#9776;</div>
 			<div class="MobileMainLogo"><a href="#"><img src="img/logo.png"></a></div>
-			<div class="NavCall"><a href="tel:8484049531"><i class="fa fa-phone" aria-hidden="true" ></i> Call Us</a></div>
+			<div class="NavCall"><a href="tel:8888888888"><i class="fa fa-phone" aria-hidden="true" ></i> Call Us</a></div>
 		</div>
 		
 		<div class="HiddenMenu" id="NavLinks">
@@ -34,7 +34,7 @@
 	<header id="DesktopHeader">
 		<div class="SocialContact">
 			<div class="HeaderContact">
-				<p>Email ID - info@legamelogistics.com</p>
+				<p>Email ID - info@shipsecurelogistics.com</p>
 				<p>Phone No. - 8484049531</p>
 			</div>
 			<div class="HeaderSocialMedia">
@@ -62,19 +62,17 @@
 	<footer id="DesktopFooter">
 		<div class="contact">
 			<img src="img/icons/call.png"><h6>8484049531</h6>
-			<img src="img/icons/mail.png"><h6>info@legamelogistics.in</h6>
+			<img src="img/icons/mail.png"><h6>info@shipsecurelogistics.in</h6>
 		</div>
 		<h6>LEGAME LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</h6>
-		<h6>MADE WITH 	&#10084; BY NEPSTARD</h6>
 	</footer>
 	
 	<footer id="MobFooter">
 		<div class="contact">
-			<div><img src="img/icons/call.png"><span>CALL US<br></span>8484049531</div>
-			<div><img src="img/icons/mail.png"><span>EMAIL US<br></span>info@legamelogistics.in</div>
+			<div><img src="img/icons/call.png"><span>CALL US<br></span>8888888888</div>
+			<div><img src="img/icons/mail.png"><span>EMAIL US<br></span>info@shipsecurelogistics.in</div>
 		</div>
 		<p>LEGAME LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</p>
-		<p>MADE WITH LOVE BY NEPSTARD</p>
 	</footer>
 	
 	
