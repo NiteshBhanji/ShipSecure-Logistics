@@ -8,10 +8,10 @@
 			// $mail->SMTPDebug = 4;                            // Enable verbose debug output
 
 			$mail->isSMTP();                                    // Set mailer to use SMTP
-			$mail->Host = 'ind-srv2.websiteserverbox.com';  	// Specify main and backup SMTP servers
+			$mail->Host = '';  	// Specify main and backup SMTP servers
 			$mail->SMTPAuth = true;                             // Enable SMTP authentication
-			$mail->Username = 'info@legamelogistics.com';                 			// SMTP username
-			$mail->Password = 'legame@123';                           	// SMTP password
+			$mail->Username = '';                 			// SMTP username
+			$mail->Password = '';                           	// SMTP password
 			$mail->SMTPSecure = 'tls';                          // Enable TLS encryption, `ssl` also accepted
 			$mail->Port = 587;                       			// TCP port to connect to
 
@@ -49,11 +49,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Contact | Legame Logistics Pvt. Ltd.</title>
+	<title>Contact | Shipsecure Logistics Pvt. Ltd.</title>
 	<link href="css/contact.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<script type="text/javascript" src="js/googlemap.js"></script>
-	
 	<script src="https://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 	<script type="text/javascript" src="js/contact_mail.js"></script>
 </head>
@@ -81,7 +80,7 @@
 	<header id="DesktopHeader">
 		<div class="SocialContact">
 			<div class="HeaderContact">
-				<p>Email ID - info@legamelogistics.com</p>
+				<p>Email ID - info@Shipsecurelogistics.com</p>
 				<p>Phone No. - 8484049531</p>
 			</div>
 			<div class="HeaderSocialMedia">
@@ -121,7 +120,7 @@
 			<div class="inneraddresscontainer">
 				<div class="containerbox add">
 					<a href="#" class="containertitle address">Address:</a>
-					<h4>Flat No. 1, Sai Meghdoot Appt., New Pandit Colony, Behind Kabra Showroom, Nashik - 422 001.</h4>
+					<h4>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quos voluptatum ipsam expedita saepe! </h4>
 				</div>
 				<a href="https://goo.gl/maps/RcWwSbch567ooUJ38" id="mapopenachor"><h4 id="mapopen" >open in map</h4></a>
 			</div>
@@ -170,8 +169,7 @@
 			<img src="img/icons/call.png"><h6>8484049531</h6>
 			<img src="img/icons/mail.png"><h6>info@legamelogistics.in</h6>
 		</div>
-		<h6>LEGAME LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</h6>
-		<h6>MADE WITH 	&#10084; BY NEPSTARD</h6>
+		<h6>ShipSecure LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</h6>
 	</footer>
 	
 	<footer id="MobFooter">
@@ -179,8 +177,7 @@
 			<div><img src="img/icons/call.png"><span>CALL US<br></span>8484049531</div>
 			<div><img src="img/icons/mail.png"><span>EMAIL US<br></span>info@legamelogistics.in</div>
 		</div>
-		<p>LEGAME LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</p>
-		<p>MADE WITH LOVE BY NEPSTARD</p>
+		<p>ShipSecure LOGISTICS PVT. LTD. &#169; ALL RIGHTS RESERVED</p>
 	</footer>
 	
 	<script>
